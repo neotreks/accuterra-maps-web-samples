@@ -1,0 +1,30 @@
+<html>
+<head>
+ <title>OpenLayers</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+ <style type="text/css">
+    html, body, #my-map {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+ </style>
+ <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+ <script type="text/javascript" src="https://unpkg.com/ol-mapbox-style@6.1.4/dist/olms.js"></script> 
+</head>
+<body>
+ <div id="my-map"></div>
+ <script type="text/javascript">
+     // Visit https://accuterra.com and create your free account to get a map API key.
+     var myKey = "YOUR-MAP-API-KEY-HERE";
+
+     olms('my-map', `https://maps.accuterra.com/v1/styles/accuterra-outdoors/style.json?key=${myKey}`).then((map) => {
+        let view = map.getView();
+        view.setCenter(ol.proj.fromLonLat([-105.0053989, 39.6500327]));
+        view.setZoom(10);
+        map.setView(view);
+     });
+ </script>
+</body>
+</html>

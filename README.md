@@ -1,2 +1,2 @@
-# accuterra-web-demos
-collection of web demos using Accuterra maps
+# accuterra-maps-web-samples
+Collection of web samples using Accuterra Maps.

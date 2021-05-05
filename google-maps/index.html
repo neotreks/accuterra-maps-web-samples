@@ -41,7 +41,7 @@
 
         map.mapTypes.set("AccuTerra", new google.maps.ImageMapType({
             getTileUrl: function(coord, zoom) {
-              return `https://maps.accuterra.com/v1/raster/accuterra-outdoors/${zoom}/${coord.x}/${coord.y}.png?key=${myAPIKey}`;
+              return `https://maps.accuterra.com/v1/raster/accuterra-outdoors/${zoom}/${coord.x}/${coord.y}.jpg?key=${myAPIKey}`;
             },
             tileSize: new google.maps.Size(256, 256),
             name: "AccuTerra",
